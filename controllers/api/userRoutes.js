@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 //return a user by their ID
 router.get('/:id', async (req, res) => {
     try{
-        const user = User.findByPk(req.params.id)
+        const user = await User.findByPk(req.params.id)
         res.json(user);
     } catch(err) {
         res.status(500).json(err);

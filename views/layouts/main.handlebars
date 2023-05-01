@@ -8,7 +8,18 @@
 </head>
 <body>
     <header>
-        
+        {{!-- navbar --}}
+        <ul>
+            <li><a href="/">Home</a></li>
+            {{#if logged_in}}
+            {{!-- only show the dashboard and logout option if the user is logged in --}}
+            <li href="/dashboard">Dashboard</li>
+            <li id="logout">Logout</li>
+            {{else}}
+            {{!-- only show the login button if the user is not logged in --}}
+            <li><a href="/login">Login</a></li>
+            {{/if}}
+        </ul>
     </header>
     {{{body}}}
 </body>

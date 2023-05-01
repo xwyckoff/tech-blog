@@ -9,6 +9,8 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+const hbs = exphbs.create();
+
 //set up session
 app.use(session({
     secret: 'supersecretsecret',
@@ -22,6 +24,9 @@ app.use(session({
         db: db
     })
 }))
+
+app.engine('handebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

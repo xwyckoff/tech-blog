@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const Post = require('../../models/Post');
-
+const { Post, User, Comment } = require('../../models');
 
 //get all posts, include the user that posted it as well as the comments associated with the post
 router.get('/', async (req, res) => {
@@ -61,3 +60,5 @@ router.put('/:id', async (req, res) => {
         res.status(500).json(err);
     }
 })
+
+module.exports = router;

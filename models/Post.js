@@ -15,6 +15,10 @@ Post.init(
             type: DataTypes.INTEGER
         },
 
+        title: {
+            type: DataTypes.STRING
+        },
+
         content: {
             type: DataTypes.STRING
         }

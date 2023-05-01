@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+#logo {
+    color:#22110f;
+    background-color: #8d9c79;
+    padding: 10px;
+    margin-top: 0;
+    border-radius: 10px;
+    width: 230px;
+    position:static;
+}
+
+header {
+    background-color: #22110f;
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #22110f;
+  }
+
+li {
+    float: left;
+}
+
+a {
+    display: block;
+    padding: 20px;
+    color: #8d9c79;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+li :hover{
+    background-color: #8d9c79;
+    color: #22110f;
+}
